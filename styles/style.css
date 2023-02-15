@@ -1,0 +1,88 @@
+@import url('global.css');
+@import url('home.css');
+@import url('about.css');
+@import url('portfolio.css');
+
+@media all and (min-width: 997px) {   
+    /* Header and Footer */
+    header nav, footer {
+        flex-direction: row;
+    }
+    
+    header nav a:first-child, footer a:first-child {
+        margin-right: auto;
+    }
+
+    /* Main global */
+    main section {
+        padding: 80px;
+    }
+
+    /* Home */
+    .photography {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .photography div {
+        width: 40%;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .photography div h1 {
+        text-align: left;
+    }
+
+    .lastProject div {
+        flex-wrap: nowrap;
+    }
+
+    .contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 1fr 60px;
+        gap: 20px;
+    }
+
+    .contact form div:nth-child(3) {
+        grid-area: 2 / 1 / 3 / span 2;
+    }
+    
+    .contact form .actions {
+        grid-area: 3 / 1 / 4 / span 2;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    /* About */
+    .about .content {
+        padding: 50px;
+    }
+
+    .about td, .about th {
+        padding: 40px 20px;
+    }
+
+    /* Portfolio */
+    .portfolio h1 {
+        text-align: left;
+    }
+
+    .portfolio h2 {
+        text-align: left;
+    }
+
+    .gallery-landscape {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 300px 300px;
+    }
+    
+    .gallery-portrait {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 300px;
+    }
+}
